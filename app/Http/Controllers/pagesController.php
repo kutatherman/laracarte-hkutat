@@ -15,4 +15,14 @@ class pagesController extends Controller
     {
         return view('pages.about');
     }
+
+    public function artisan()
+    {
+        return view('pages.artisan');
+    }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }

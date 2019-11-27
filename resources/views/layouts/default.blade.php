@@ -12,20 +12,23 @@
 
     <!-- latest compiled and minified css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-    <title>@yield('title') | Laracarte </title>
+    <title>{{page_title($title ?? '') }}</title>
+    <title>{{isset($title) ? $title . ' | ' : '' }}Laracarte -List of artisans </title>
 
     <style>
         body{
             font-family: 'Open sans', Helvetica, Arial, sans-serif;
         }
+        .active{
+            background-color: #00ffff;
+            border-radius: 2px;
+        }
     </style>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 py-4">
 @include('layouts/partials._nav')
 
-<div class="container">
 @yield('content')
-</div>
 
 @include('layouts/partials/_footer')
 
