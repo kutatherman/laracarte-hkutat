@@ -21,8 +21,5 @@ class pagesController extends Controller
         return view('pages.artisan');
     }
 
-    public function contact()
-    {
-        return view('pages.contact');
-    }
+
 }
