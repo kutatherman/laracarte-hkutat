@@ -13,7 +13,7 @@
     <!-- latest compiled and minified css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <title>{{page_title($title ?? '') }}</title>
-    <title>{{isset($title) ? $title . ' | ' : '' }}Laracarte -List of artisans </title>
+    <title>{{isset($title) ? $title . ' | ' : '' }}{{env('APP_NAME')}}-List of artisans </title>
 
     <style>
         body{
