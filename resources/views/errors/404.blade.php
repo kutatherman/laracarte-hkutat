@@ -2,5 +2,5 @@
 
 @section('title',  'Page non trouver')
 
-@section('message',  'Page absent ou supprimer')
+@section('message',  'Page absente ou supprimer')
 
