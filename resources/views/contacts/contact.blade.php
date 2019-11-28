@@ -10,17 +10,21 @@
 
 
             <form action="" method="POST" novalidate role="form">
-            	<div class="form-group">
+                {{csrf_field()}}
+            	<div class="form-group  {{$errors->has('name') ? 'was-validated' : ''}}">
             		<label for="name" class="col-form-label">Name</label>
             		<input type="text" class="form-control" name="name" id="name" required="required" placeholder="Input...">
+                    {!! $errors->first('name', '<div class="alert alert-danger">:message</div>')!!}
             	</div>
-                <div class="form-group">
+                <div class="form-group {{$errors->has('email') ? 'was-validated' : ''}}">
                     <label for="email" class="col-form-label">Email</label>
-                    <input type="text" class="form-control" email="email" id="email" required="required" placeholder="Input...">
+                    <input type="text" class="form-control" name="email" id="email" required="required" placeholder="Input...">
+                    {!! $errors->first('email', '<div class="alert alert-danger">:message</div>')!!}
                 </div>
-                <div class="form-group">
+                <div class="form-group {{$errors->has('message') ? 'was-validated' : ''}}">
                     <label for="message" class="col-form-label sr-only">Message</label>
-                    <textarea type="text" class="form-control" email="message" id="message" required="required" rows="10" with="10" = placeholder="Vore message"></textarea>
+                    <textarea type="text" class="form-control" name="message" id="message" required="required" rows="10" with="10" = placeholder="Vore message"></textarea>
+                    {!! $errors->first('message', '<div class="alert alert-danger">:message</div>')!!}
                 </div>
 
                 <button type="submit" class="btn btn-block btn-info" >Submit Enquiry &raquo;</button>
