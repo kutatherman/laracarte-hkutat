@@ -9,7 +9,7 @@
                 <p class="text-muted">If you having trouble with this seervice, please <a href="mailto:kutat2000@gmail.com">ask for help</a></p>
 
 
-            <form action="" method="POST" role="form">
+            <form action="" method="POST" novalidate role="form">
             	<div class="form-group">
             		<label for="name" class="col-form-label">Name</label>
             		<input type="text" class="form-control" name="name" id="name" required="required" placeholder="Input...">
